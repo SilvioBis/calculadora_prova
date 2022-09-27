@@ -12,6 +12,7 @@ export class Tab1Page {
   valor1='';
   valor2='';
   resultado='';
+  
   soma = 0;
   sub = 0;
   div = 0;
@@ -27,8 +28,8 @@ export class Tab1Page {
     const alert = await this.alertController.create({
       message: '<p><b>Resultado</b></p>'+
       '<p>Valor 1 :   ' + this.valor1 + '</p>' +
-      '<p>Valor 1 :   ' + this.valor2 + '</p>' +
-      '<p>Resultado :   ' + (this.soma) + '</p>' ,
+      '<p>Valor 2 :   ' + this.valor2 + '</p>' +
+      '<p>Resultado :   ' + (this.soma) +'</p>' ,
       buttons: ['OK'],
     });
 
@@ -43,7 +44,7 @@ export class Tab1Page {
     const alert = await this.alertController.create({
       message: '<p><b>Resultado</b></p>'+
       '<p>Valor 1 :   ' + this.valor1 + '</p>' +
-      '<p>Valor 1 :   ' + this.valor2 + '</p>' +
+      '<p>Valor 2 :   ' + this.valor2 + '</p>' +
       '<p>Resultado :   ' + (this.sub) + '</p>' ,
       buttons: ['OK'],
     });
@@ -59,7 +60,7 @@ export class Tab1Page {
     const alert = await this.alertController.create({
       message: '<p><b>Resultado</b></p>'+
       '<p>Valor 1 :   ' + this.valor1 + '</p>' +
-      '<p>Valor 1 :   ' + this.valor2 + '</p>' +
+      '<p>Valor 2 :   ' + this.valor2 + '</p>' +
       '<p>Resultado :   ' + (this.mult) + '</p>' ,
       buttons: ['OK'],
     });
@@ -75,13 +76,14 @@ export class Tab1Page {
     const alert = await this.alertController.create({
       message: '<p><b>Resultado</b></p>'+
       '<p>Valor 1 :   ' + this.valor1 + '</p>' +
-      '<p>Valor 1 :   ' + this.valor2 + '</p>' +
+      '<p>Valor 2 :   ' + this.valor2 + '</p>' +
       '<p>Resultado :   ' + (this.div) + '</p>' ,
       buttons: ['OK'],
     });
 
     await alert.present();
-  }
+  }  
+
 
   async maior() {
     if( parseFloat(this.valor1) > parseFloat(this.valor2) )

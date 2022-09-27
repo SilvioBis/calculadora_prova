@@ -15,32 +15,40 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label  position="floating">Valor 1 : </ion-label>
-    <ion-textarea rows="6" cols="20" placeholder="Escreva o valor 1" [(ngModel)]="valor1"></ion-textarea>
+    <ion-input  placeholder="Escreva o valor 1" [(ngModel)]="valor1"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label  position="floating" >Valor 2 : </ion-label>
-    <ion-textarea rows="6" cols="20" placeholder="Escreva o valor 2"  [(ngModel)]="valor2"></ion-textarea>
+    <ion-input placeholder="Escreva o valor 2"  [(ngModel)]="valor2"></ion-input>
   </ion-item>
 
   <ion-grid fixed>
     <ion-row>
       <ion-col size-md="3">
 
-        <ion-button fill="outline" (click)="somar()">+</ion-button>
+        <ion-button color="dark" (click)="somar()">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
 
       </ion-col>
 
       <ion-col size-md="3">
-        <ion-button fill="outline" (click)="subi()">-</ion-button>
+        <ion-button color="dark" (click)="subi()">
+          <ion-icon name="remove-outline"></ion-icon>
+        </ion-button>
       </ion-col >
 
       <ion-col size-md="3">
-        <ion-button fill="outline" (click)="multi()">*</ion-button>
+        <ion-button  color="dark"  (click)="multi()">
+          <ion-icon name="close-outline"></ion-icon>
+        </ion-button>
       </ion-col>
 
       <ion-col size-md="3">
-        <ion-button fill="outline" (click)="divi()">/</ion-button>
+        <ion-button color="dark" (click)="divi()">
+          <ion-icon name="code-slash-outline"></ion-icon>
+        </ion-button>
       </ion-col>
 
     </ion-row>
@@ -48,12 +56,12 @@
     <ion-row>
       <ion-col size-md="6">
 
-        <ion-button size="large" (click)="maior()">Maior</ion-button>
+        <ion-button size="medium" (click)="maior()">Maior</ion-button>
 
       </ion-col>
 
       <ion-col size-md="6">
-        <ion-button  size="large" (click)="menor()">Menor</ion-button>
+        <ion-button size="medium" (click)="menor()">Menor</ion-button>
       </ion-col >
 
     </ion-row>
@@ -61,8 +69,8 @@
   </ion-grid>
   <ion-item lines="full"></ion-item>
   <ion-item lines="full">
-    <ion-label  position="floating">Resultado : </ion-label> 
-    <ion-textarea rows="6" cols="20" placeholder="Escreva o valor 2" [(ngModel)]="resultado"></ion-textarea> 
+    <ion-label position="floating">Resultado : </ion-label> 
+    <ion-input rows="6" cols="20" placeholder="" [(ngModel)]="resultado"></ion-input>
   </ion-item>
 
 </ion-content>
