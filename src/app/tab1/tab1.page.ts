@@ -13,6 +13,7 @@ export class Tab1Page {
   valor2='';
   resultado='';
   
+  
   soma = 0;
   sub = 0;
   div = 0;
@@ -29,7 +30,7 @@ export class Tab1Page {
       message: '<p><b>Resultado</b></p>'+
       '<p>Valor 1 :   ' + this.valor1 + '</p>' +
       '<p>Valor 2 :   ' + this.valor2 + '</p>' +
-      '<p>Resultado :   ' + (this.soma) +'</p>' ,
+      '<p>Resultado :   ' + (this.soma) + '</p>',
       buttons: ['OK'],
     });
 
@@ -84,6 +85,21 @@ export class Tab1Page {
     await alert.present();
   }  
 
+  /*async resp() {
+    if (this.soma = this.soma) {
+        
+    }
+      if (this.mult){
+          console.log ("Multiplicação")
+    }
+          if(this.div){
+              console.log ("Divisão")
+    }
+              if(this.sub){
+                console.log ("Subtração")
+              }
+  }
+*/
 
   async maior() {
     if( parseFloat(this.valor1) > parseFloat(this.valor2) )

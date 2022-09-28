@@ -1,12 +1,12 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="primary">
-      <ion-button color="secondary" (click)="limpar()">
-        <ion-icon size="large" slot="icon-only" ios="trash-outline" md="trash-outline"></ion-icon>
-
+      <ion-button color="danger" (click)="limpar()">
+        <ion-icon  size="large"  ios="refresh-outline" md="refresh-outline"></ion-icon>
+        
       </ion-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title color="light">
       Calculadora
     </ion-title>
   </ion-toolbar>
@@ -14,12 +14,12 @@
 
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-label  position="floating">Valor 1 : </ion-label>
+    <ion-label position="floating">Valor 1 : </ion-label>
     <ion-input  placeholder="Escreva o valor 1" [(ngModel)]="valor1"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label  position="floating" >Valor 2 : </ion-label>
+    <ion-label  position="floating">Valor 2 : </ion-label>
     <ion-input placeholder="Escreva o valor 2"  [(ngModel)]="valor2"></ion-input>
   </ion-item>
 
@@ -56,21 +56,27 @@
     <ion-row>
       <ion-col size-md="6">
 
-        <ion-button size="medium" (click)="maior()">Maior</ion-button>
+        <ion-button color="medium" expand="full" size="medium" (click)="maior()">Maior</ion-button>
 
       </ion-col>
 
       <ion-col size-md="6">
-        <ion-button size="medium" (click)="menor()">Menor</ion-button>
+        <ion-button color="medium" expand="full" size="medium" (click)="menor()">Menor</ion-button>
       </ion-col >
 
     </ion-row>
 
   </ion-grid>
-  <ion-item lines="full"></ion-item>
+
   <ion-item lines="full">
     <ion-label position="floating">Resultado : </ion-label> 
     <ion-input rows="6" cols="20" placeholder="" [(ngModel)]="resultado"></ion-input>
   </ion-item>
 
-</ion-content>
+  <ion-item lines="full">
+    <ion-label position="floating">Conta : </ion-label> 
+    <ion-input rows="6" cols="20" placeholder="" (click)="resp()"></ion-input>
+  </ion-item>
+
+
+</ion-content>  
