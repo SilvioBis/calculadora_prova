@@ -1,17 +1,215 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
+  <ion-toolbar color="dark">
+    <ion-title >
+      Calculadora 2
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-item>
+    <ion-label position="floating">Operação : </ion-label>
+    <ion-input  placeholder="Escreva o valor 1" [(ngModel)]="valor1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >Resultado : </ion-label>
+  </ion-item>
+  <ion-grid size="100xs">
+<!------------------Primeira Linha ------------------------------>
+    <ion-row size="10xs" >
+     
+      <ion-item lines="full" class="item-has-focus ion-touched">
+      <ion-col size="2"> 
+        <ion-item button lines="none">
+          <ion-label><h6 style="font-size: 10px">MC</h6></ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2"> 
+        <ion-item button lines="none">
+          <ion-label><h6 style="font-size: 10px">MR</h6></ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2"> 
+        <ion-item button lines="none">
+          <ion-label><h6 style="font-size: 10px">M+</h6></ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2"> 
+        <ion-item button lines="none">
+          <ion-label><h6 style="font-size: 10px">M-</h6></ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2"> 
+        <ion-item button lines="none">
+          <ion-label><h6 style="font-size: 10px">MS</h6></ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2"> 
+        <ion-item button lines="none">
+          <ion-label><h6 style="font-size: 10px">Mª</h6></ion-label>
+        </ion-item>
+      </ion-col>
+      
+     </ion-item>
+
+
+
+    </ion-row>
+<!------------------Segundo Linha -------------------------------->
+    <ion-row size="15xs">
+
+      <ion-col size="3" class="ion-align-self-center" > 
+        <ion-item button lines="none" >
+          <h3>%</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3" > 
+        <ion-item button lines="none">
+          <h3>CE</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>C</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>(X)</h3>
+        </ion-item>
+      </ion-col>
+      
+     
+
+    </ion-row>
+<!------------------Terceira Linhas ------------------------------>
+    <ion-row size="15xs">
+
+      <ion-col size="3"> 
+        <ion-item button lines="none" >
+          <h3>¹/x</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>x²</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>²/x</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>/</h3>
+        </ion-item>
+      </ion-col>
+  
+    </ion-row>
+<!------------------Quarta Linhas -------------------------------->
+    <ion-row size="15xs"> 
+      
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>7</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>8</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>9</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>*</h3>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+<!------------------Quinta Linhas -------------------------------->
+    <ion-row size="15xs">
+      
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>4</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>5</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>6</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>-</h3>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+<!------------------Sexta Linhas --------------------------------->
+    <ion-row size="15xs">
+      
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>1</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>2</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>3</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>+</h3>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+<!------------------Seitma Linhas -------------------------------->
+    <ion-row size="15xs">
+      
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>+/-</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>0</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button lines="none">
+          <h3>,</h3>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3"> 
+        <ion-item button color="primary" lines="none">
+          <h3>=</h3>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+    
+  </ion-grid>
+  
 </ion-content>
